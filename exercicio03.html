@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+
+    <h1>Pedido de Lanche</h1>
+
+    <h3>Menu</h3>
+    <h3>Big Super Sanduba, 2 hambúrgueres, queijo, batata frita e refrigerante R$ 5,00</h3>
+    <h3>Quase Super Sanduba, 1 hambúrgueres, batata frita e refrigerante R$ 3,00</h3>
+    <h3>Mirradus Sanduba, 1 misto quente e refrigerante R$ 1,50</h3>
+    <br>
+    
+    <div id="resultadoPedido"></div>
+    
+    
+        <script>
+    
+            const Big = 5.00;
+            const Quase = 3.00;
+            const Mirradus = 1.50;
+    
+            let qtd_Big = Number(prompt ("Você deseja quantos Big Super Sanduba?"));
+            let qtd_Quase = Number(prompt ("Você deseja quantos Quase Super Sanduba?"));
+            let qtd_Mirradus= Number(prompt ("Você deseja quantos Mirradus Sanduba?"));
+            let resul;
+
+let Valor_Total =
+(Big * qtd_Big) +
+(Quase * qtd_Quase) +
+(Mirradus * qtd_Mirradus);
+
+    if(qtd_Big >= 1 && qtd_Quase == 0 && qtd_Mirradus == 0){
+
+resul = "Big Super Sanduba, " + Number(qtd_Big * 2) + " hambúrgueres, " + qtd_Big + " queijo, " + qtd_Big + " batata frita e " + qtd_Big + " refrigerante R$: " + Valor_Total;
+
+}else if(qtd_Big >= 0 && qtd_Quase >= 1 && qtd_Mirradus == 0){
+
+resul = "Quase Super Sanduba, " + qtd_Quase + " hambúrgueres, " + qtd_Quase + " batata frita e " + qtd_Quase + " refrigerante R$: " + Valor_Total;
+
+}else if(qtd_Big >= 0 && qtd_Quase == 0 && qtd_Mirradus >= 1){
+
+resul = "Mirradus Sanduba, " + " Misto quente, " + qtd_Mirradus +  " refrigerante R$: " + Valor_Total;
+
+}
+
+    document.getElementById("resultadoPedido").innerHTML = "<h1>Pedido do Cliente</h1>" + resul;
+        </script>
+
+</body>
+</html>

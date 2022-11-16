@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    
+    <h1>Segundo Teste de Mesa</h1>
+    
+    <div id="resultado"></div>
+
+
+    <script>
+
+        let W;
+        let variX = Number(prompt("Digite o valor da variável X"));
+        let variY = Number(prompt("Digite o valor da variável Y"));
+        let variZ = Number(prompt("Digite o valor da variável Z"));
+       
+
+        if(variX >= variY && variZ <= variY){
+            
+            W = "Início </br> | X = " + Number(variX) + "</br> | X = "+ Number(variY) + " </br> | Y =  "+ Number(variZ) +"  </br> | se (X >= Y) e (Z =< Y) </br> | | então W ← 10 </br> | | senão W ← 20 </br> | fim-se </br> | : </br> | : </br> fim </br></br> Resposta: </br> 10"
+            
+        }else {
+
+            W = "Início </br> | : </br>  | X = "+ Number(variX) + " </br> | Y =  "+ Number(variY) +"  </br> | se (X >= Y) e (Z =< Y) </br> | | então W ← 10 </br> | | senão W ← 20 </br> | fim-se </br> | : </br> | : </br> fim </br></br> Resposta: </br> 20"
+
+        };
+
+        document.getElementById("resultado").innerHTML = W;
+        
+        </script>
+
+
+
+    <h2>O valor armazenado na variável W é 20 se:</h2>
+
+    (X) X < Y < Z </br>
+
+    ( ) X <= Y <= Z </br>
+
+    ( ) X < Y <= Z </br>
+
+    ( ) Y < X < Z </br>
+
+    ( ) Z < X < Y </br>
+
+    ( ) Nenhuma das anteriores
+
+
+</body>
+</html>

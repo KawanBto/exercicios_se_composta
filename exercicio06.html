@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    
+    <h1>Comissão da empresa</h1>
+    
+    <div id="resultado"></div>
+    <script>
+
+        let func1 = prompt("Digite o nome do funcionário");
+        let numero1 = Number(prompt("Digite a quantidade de produtos vendidos"));
+        let resultado;
+
+        if(numero1 >= 1){
+            
+            resultado = func1 + " receberá: R$" + Number(numero1 * 1) + " de comissão."
+            
+        }else if(numero1 >= 250){
+
+            resultado = func1 + " receberá: R$" + Number(numero1 * 1.5) + " de comissão."
+
+        }else if(numero1 >=500 ){
+
+        resultado = func1 + " receberá: R$" + Number(numero1 * 2) + " de comissão."
+
+        };
+
+        document.getElementById("resultado").innerHTML = resultado;
+        
+        </script>
+</body>
+</html>

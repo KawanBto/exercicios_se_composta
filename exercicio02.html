@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    
+    <h1>Registro de Kg das Pessoas</h1>
+
+    <div id="registro"></div>
+    <script>
+
+    let nome1 = prompt("Digite o nome da primeira pessoa.");
+    let peso1 = Number(prompt("Digite o peso desta pessoa em kg."));
+    let nome2 = prompt("Digite o nome da segunda pessoa.");
+    let peso2 = Number(prompt("Digite o peso desta pessoa em kg."));
+    let nome3 = prompt("Digite o nome da terceira pessoa.");
+    let peso3 = Number(prompt("Digite o peso desta pessoa em kg."));
+    let resul;
+
+    if(peso1 >= peso2 && peso1 >= peso3 && peso2 > peso3){
+
+        resul = nome1 + ":" + peso1 + " kg" + "</br>" + nome2 + ":" + peso2 + " kg" + "</br>" +  nome3 + ":" + peso3 + " kg";
+
+    }else if(peso1 >= peso2 && peso1 >= peso3 && peso2 < peso3) {
+
+        resul = nome1 + ":" + peso1 + " kg" + "</br>" + nome3 + ":" + peso3 + " kg" + "</br>" +  nome2 + ":" + peso2 + " kg";
+
+
+    }else if(peso2 >= peso1 && peso2 >= peso3 && peso1 > peso3){
+
+        resul = nome2 + ":" + peso2 + " kg" + "</br>" + nome1 + ":" + peso1 + " kg" + "</br>" +  nome3 + ":" + peso3 + " kg";
+
+    }else if(peso2 >= peso1 && peso2 >= peso3 && peso1 < peso3) {
+
+        resul = nome2 + ":" + peso2 + " kg" + "</br>" + nome3 + ":" + peso3 + " kg" + "</br>" +  nome1 + ":" + peso1 + " kg";
+
+
+    }else if(peso3 >= peso1 && peso3 >= peso2 && peso1 > peso2){
+
+        resul = nome3 + ":" + peso3 + " kg" + "</br>" + nome1 + ":" + peso1 + " kg" + "</br>" +  nome2 + ":" + peso2 + " kg";
+
+    }else if(peso3 >= peso1 && peso3 >= peso2 && peso1 < peso2) {
+
+        resul = nome3 + ":" + peso3 + " kg" + "</br>" + nome2 + ":" + peso2 + " kg" + "</br>" +  nome1 + ":" + peso1 + " kg";
+
+    }
+
+document.getElementById("registro").innerHTML = resul
+    </script>
+
+</body>
+</html>

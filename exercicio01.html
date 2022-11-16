@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    
+    <h1>Registro Aluno</h1>
+
+    <div id="boletim"></div>
+
+    <script>
+
+    let nome = prompt("Digite o nome do Aluno.");
+    let nota1 = Number(prompt("Digite a nota deste Aluno."));
+    let nota2 = Number(prompt("Digite a segunda nota deste Aluno."));
+    let nota3 = Number(prompt("Digite a terceira nota deste Aluno."));
+    let media = parseInt((Number((nota1 + nota2 + nota3)/3)));
+    let resul;
+    let final = [nota1, nota2, nota3];
+
+    final.sort((a, b) => b - a);
+ 
+    console.log(final)
+
+if(media >=6 ){
+    resul = "O aluno " + nome + " foi aprovado com média " + media
+}else{
+    resul = "O aluno " + nome + " foi reprovado com média " + media
+}
+
+document.getElementById("boletim").innerHTML = resul + "</br> Notas: " + final;
+    </script>
+
+</body>
+</html>
